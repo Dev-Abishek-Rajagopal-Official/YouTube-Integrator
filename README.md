@@ -27,6 +27,7 @@ YouTube Integrator is a full-stack application designed to seamlessly integrate 
 YouTube-Integrator/
 ├── yt_backend/
 │   └── [Backend source files]
+│   └── .env
 ├── yt_frontend/
 │   └── yt-frontend/
 │       └── [Frontend source files]
@@ -41,7 +42,57 @@ YouTube-Integrator/
 
 * **Node.js**: For frontend development.
 * **Python 3.x**: For backend development.
-* **\[Any other dependencies]**
+* **Google API Key**:
+
+---
+
+### ✅ Final Guide: YouTube API Key Setup for React + Django Integration
+
+---
+
+#### 🔐 Step 1: Get Your YouTube API Key
+
+1. **Go to** [https://console.cloud.google.com/](https://console.cloud.google.com/)
+2. **Create a new project** (or use an existing one)
+3. **Enable YouTube Data API v3**:
+
+   * Go to [https://console.cloud.google.com/apis/library](https://console.cloud.google.com/apis/library)
+   * Search for and enable **YouTube Data API v3**
+4. **Create API Key**:
+
+   * Go to [https://console.cloud.google.com/apis/credentials](https://console.cloud.google.com/apis/credentials)
+   * Click **“+ Create Credentials” → “API Key”**
+   * Copy the key
+5. **Restrict Your API Key** (Recommended):
+
+   * Choose `IP address` restriction if you're using this from Django backend
+   * Restrict usage to **YouTube Data API v3**
+
+---
+
+#### ⚙️ Step 2: Add the API Key to Django
+
+**1. Add `.env` file to your Django root:**
+
+```env
+YOUTUBE_API_KEY=your_real_youtube_api_key_here
+```
+
+
+---
+
+#### 🛡️ Step 3: Add These Django URLs
+
+```python
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path("api/youtube/search", name="youtube-search"),
+    path("api/youtube/video", name="youtube-video-detail"),
+]
+```
+
 
 ### Installation
 
