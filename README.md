@@ -1,7 +1,3 @@
-Certainly! Based on the information available from the GitHub repository [Dev-Abishek-Rajagopal-Official/YouTube-Integrator](https://github.com/Dev-Abishek-Rajagopal-Official/YouTube-Integrator), here's a comprehensive `README.md` file to introduce and document the project:
-
----
-
 # YouTube Integrator
 
 YouTube Integrator is a full-stack application designed to seamlessly integrate and manage YouTube content. Built with a Python backend and a TypeScript frontend, this project aims to provide users with an intuitive interface to interact with YouTube's API and manage video content efficiently.
